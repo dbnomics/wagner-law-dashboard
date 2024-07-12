@@ -48,9 +48,8 @@ def main() -> None:
                 "Charts Wagner Law",
                 "Charts Government Expenditure",
                 "Sources",
-                "DBnomics",
             ],
-            icons=["book", "bar-chart", "bar-chart", "paperclip", "search"],
+            icons=["book", "bar-chart", "bar-chart", "search"],
             menu_icon=":",
             default_index=0,
         )
@@ -117,14 +116,17 @@ def main() -> None:
         st.plotly_chart(fig_gov_exp)
 
     if selected == "Sources":
+        st.subheader("**Data**\n")
         st.write(
-            'GDP per Capita: [link](https://db.nomics.world/WB/WDI?dimensions=%7B"indicator"%3A%5B"NY.GDP.PCAP.KD"%5D%7D&tab=list)\n'
             "\n"
-            'General Government Expenditure: [link](https://db.nomics.world/WB/WDI?dimensions=%7B"indicator"%3A%5B"NE.CON.GOVT.KD"%5D%7D&tab=list)\n'
+            '- [GDP per Capita](https://db.nomics.world/WB/WDI?dimensions=%7B"indicator"%3A%5B"NY.GDP.PCAP.KD"%5D%7D&tab=list)\n'
+            "\n"
+            '- [General Government Expenditure](https://db.nomics.world/WB/WDI?dimensions=%7B"indicator"%3A%5B"NE.CON.GOVT.KD"%5D%7D&tab=list)\n'
         )
+        st.markdown("---")
+        st.write("[Source Code](https://github.com/dbnomics/wagner-law-dashboard)\n")
 
-    if selected == "DBnomics":
-        st.write("Visit DBnomics by clicking [here](https://db.nomics.world)")
+        st.write("[DBnomics](https://db.nomics.world)\n")
 
 
 if __name__ == "__main__":
