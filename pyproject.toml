@@ -1,0 +1,36 @@
+[project]
+name = "wagner-law"
+version = "0.1.0"
+description = "Wagner Law dashboard with DBnomics data"
+authors = [
+    { name = "Juliette Bornier", email = "juliette.bornier.3110@gmail.com" }
+]
+dependencies = [
+    "streamlit>=1.36.0",
+    "pandas>=2.2.2",
+    "dbnomics>=1.2.5",
+    "matplotlib>=3.9.0",
+    "plotly>=5.22.0",
+    "ruff>=0.4.10",
+    "statsmodels>=0.14.2",
+    "importlib-resources>=6.4.0",
+    "streamlit-option-menu>=0.3.13",
+    "scikit-learn>=1.5.1",
+    "plotly-express>=0.4.1",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = ["ruff"]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/wagner_law"]
