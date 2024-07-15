@@ -20,7 +20,7 @@ def plot_wagner_law(df, country):
         df,
         x="GDP per Capita",
         y="General Government Expenditure",
-        title=f"Laffer curve for {country}",
+        title=f"Wagner curve for {country}",
         labels={
             "GDP per Capita": "GDP per Capita (constant 2015 US$)",
             "General Government Expenditure": " General government expenditure (constant 2015 US$) ",
